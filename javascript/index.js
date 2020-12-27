@@ -63,15 +63,14 @@ var nameList = ["Adelia", "Agnes", "Alexander", "Antonius", "Christine", "Daniel
 nameList.sort();
 
 function checkPass() {
-    var input = document.getElementById("input").value;
-    console.log(input);
+    input = document.getElementById("input").value;
 
     if (input == "") {
         document.getElementById("demo").innerHTML = "Please enter your name !"
     } else {
         for (i = 0; i < nameList.length; i++) {
             if (input == nameList[i]) {
-            window.open("http://localhost/Myclass/html/indexEn.html", "_self")
+            window.open("./html/indexEn.html", "_self")
                 return;
             }
         }

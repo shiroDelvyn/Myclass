@@ -5,9 +5,39 @@ function box() {
 
 var d = new Date();
 var h = d.getHours();
+var user = prompt("How do we call you ?");
+
+function typeUser() {
+    alert("Please type your name !");
+    user = prompt("How do we call you ?");
+    if (user === null || user == "") {
+        typeUser();
+    } else {
+        if (h >= 5 && h < 10 ) {
+            greet(1);
+        } else if (h >= 10 && h < 14) {
+            greet(2);
+        } else if (h >= 14 && h < 18) {
+            greet(3);
+        } else {
+            greet(4);
+        }
+    }
+}
+
+function greet(time) {
+    var array = ["Morning", "Afternoon", "Evening", "Night"];
+    let i = time - 1;
+    alert("Good " + array[i] + " " + user);
+}
 
 window.onload=function() {
     if (h >= 5 && h < 10 ) {
+        if (user === null || user == "") {
+            typeUser();
+        } else {
+            greet(1);
+        }
         function myFunction1(x) {
             if (x.matches) { // If media query matches
                 document.body.style.backgroundImage = "url('../image/hpWallpaperM.jpg')";
@@ -20,6 +50,11 @@ window.onload=function() {
           myFunction1(x) // Call listener function at run time
           x.addListener(myFunction1) // Attach listener function on state changes
     } else if (h >= 10 && h < 14) {
+        if (user === null || user == "") {
+            typeUser();
+        } else {
+            greet(2);
+        }
         function myFunction2(x) {
             if (x.matches) { // If media query matches
                 document.body.style.backgroundImage = "url('../image/hpWallpaperA.jpg')";
@@ -32,6 +67,11 @@ window.onload=function() {
           myFunction2(x) // Call listener function at run time
           x.addListener(myFunction2) // Attach listener function on state changes
     } else if (h >= 14 && h < 18) {
+        if (user === null || user == "") {
+            typeUser();
+        } else {
+            greet(3);
+        }
         function myFunction3(x) {
             if (x.matches) { // If media query matches
                 document.body.style.backgroundImage = "url('../image/hpWallpaperE.jpg')";
@@ -44,6 +84,11 @@ window.onload=function() {
           myFunction3(x) // Call listener function at run time
           x.addListener(myFunction3) // Attach listener function on state changes
     } else {
+        if (user === null || user == "") {
+            typeUser();
+        } else {
+            greet(4);
+        }
         function myFunction4(x) {
             if (x.matches) { // If media query matches
                 document.body.style.backgroundImage = "url('../image/hpWallpaperN.jpg')";

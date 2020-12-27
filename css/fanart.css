@@ -70,7 +70,7 @@ body {
     z-index: 100000000;
 }
 
-div.contentGallery {
+div.fanartGallery {
     margin: 10px;
     border: 2px solid white;
     float: left;
@@ -81,11 +81,11 @@ div.contentGallery {
     display: inline;
 }
   
-div.contentGallery:hover {
+div.fanartGallery:hover {
     border: 3px solid black;
 }
   
-div.contentGallery img {
+div.fanartGallery img {
     width: 100%;
     height: auto;
 }
@@ -96,7 +96,7 @@ div.description {
 }
 
 @media screen and (max-width: 1080px) {
-    div.contentGallery {
+    div.fanartGallery {
         margin: 10px;
         border: 2px solid white;
         float: left;
