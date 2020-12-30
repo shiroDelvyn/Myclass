@@ -93,6 +93,7 @@ div.contentGallery img {
 div.description {
     padding: 15px;
     text-align: center;
+    color: white;
 }
 
 @media screen and (max-width: 1080px) {

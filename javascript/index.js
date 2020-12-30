@@ -1,5 +1,28 @@
 var d = new Date();
-var h = d.getHours();   
+var h = d.getHours();
+
+var nameList = ["Adelia", "Agnes", "Alexander", "Antonius", "Christine", "Daniel", "Dave", "Delvyn", "Dominique", "Elaine", 
+    "Ester", "Ethan", "Evelyn", "Feby", "Felisse", "Gilbert", "Gilbert", "Irene", "Jaxine", "Jaycent", "Jeremia", "Jesslyn", 
+    "Jody", "Joice", "Jonathan", "Jovian", "Jovita", "Juswiana", "Kaleb", "Kartika", "Malika", "Margaret", "Michelle", 
+    "Nadya", "Owen", "Richard", "Ricky", "Rivaldo", "Roderick", "Ruth", "Ruth", "Santo", "Sebastian", "Stevana", 
+    "Stevany", "Zoya", "Johnson"];
+nameList.sort();
+
+function checkPass() {
+    let user = document.getElementById("input").value;
+
+    if (user == "") {
+        document.getElementById("demo").innerHTML = "Please enter your name !"
+    } else {
+        for (i = 0; i < nameList.length; i++) {
+            if (user == nameList[i]) {
+            window.open("./html/indexEn.html", "_self")
+                return;
+            }
+        }
+        document.getElementById("demo").innerHTML = "You are not IX-B member !!";
+    }
+}
 
 window.onload=function() {
     if (h >= 5 && h < 10 ) {
@@ -53,27 +76,4 @@ window.onload=function() {
           x.addListener(myFunction4) // Attach listener function on state changes
     }
     document.getElementById("submit").addEventListener("click", checkPass)
-}
-
-var nameList = ["Adelia", "Agnes", "Alexander", "Antonius", "Christine", "Daniel", "Dave", "Delvyn", "Dominique", "Elaine", 
-    "Ester", "Ethan", "Evelyn", "Feby", "Felisse", "Gilbert", "Gilbert", "Irene", "Jaxine", "Jaycent", "Jeremia", "Jesslyn", 
-    "Jody", "Joice", "Jonathan", "Jovian", "Jovita", "Juswiana", "Kaleb", "Kartika", "Malika", "Margaret", "Michelle", 
-    "Nadya", "Owen", "Richard", "Ricky", "Rivaldo", "Roderick", "Ruth", "Ruth", "Santo", "Sebastian", "Stevana", 
-    "Stevany", "Zoya", "Johnson"];
-nameList.sort();
-
-function checkPass() {
-    input = document.getElementById("input").value;
-
-    if (input == "") {
-        document.getElementById("demo").innerHTML = "Please enter your name !"
-    } else {
-        for (i = 0; i < nameList.length; i++) {
-            if (input == nameList[i]) {
-            window.open("./html/indexEn.html", "_self")
-                return;
-            }
-        }
-        document.getElementById("demo").innerHTML = "You are not IX-B member !!";
-    }
 }
